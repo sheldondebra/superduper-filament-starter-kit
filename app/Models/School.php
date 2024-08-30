@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\Student;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
@@ -15,6 +16,7 @@ class School extends Model
 
     protected $fillable = [
         'name',
+        'schoold_id'
     ];
 
     public function members(): BelongsToMany
@@ -22,8 +24,8 @@ class School extends Model
         return $this->belongsToMany(User::class);
     }
 
-    public function students(): BelongsToMany
+    public function students(): HasMany
     {
-        return $this->belongsToMany(Student::class);
+        return $this->hasMany(Student::class);
     }
 }
