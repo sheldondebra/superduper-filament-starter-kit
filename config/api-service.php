@@ -11,7 +11,7 @@ return [
     ],
     'models' => [
         'token' => [
-            'enable_policy' => true,
+            'enable_policy' => false,
         ],
     ],
     'route' => [
@@ -20,6 +20,6 @@ return [
     ],
     'tenancy' => [
         'enabled' => true,
-        'awareness' => false,
+        'awareness' => true,
     ],
 ];

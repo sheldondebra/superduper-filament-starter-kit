@@ -35,7 +35,7 @@ class CreateUser extends CreateRecord
 
         $settings->loadMailSettingsToConfig();
 
-        $user->notify($notification);
+        // $user->notify($notification);
 
         Notification::make()
             ->title(__('resource.user.notifications.notification_resent.title'))

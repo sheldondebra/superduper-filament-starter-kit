@@ -19,7 +19,7 @@ class School extends Model
         'schoold_id'
     ];
 
-    public function members(): BelongsToMany
+    public function users(): BelongsToMany
     {
         return $this->belongsToMany(User::class);
     }

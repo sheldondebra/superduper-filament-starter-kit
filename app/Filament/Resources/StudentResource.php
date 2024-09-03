@@ -37,7 +37,8 @@ class StudentResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('id')
-                    ->label('ID')
+                    ->label('School Name')
+
                     ->searchable(),
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
